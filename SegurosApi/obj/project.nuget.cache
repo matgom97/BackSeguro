@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A5Q12DsT0Z4=",
+  "dgSpecHash": "UfFqZkNJhZ4=",
   "success": true,
-  "projectFilePath": "/Users/mateogomezosio/SegurosApi/SegurosApi.csproj",
+  "projectFilePath": "/Users/mateogomezosio/Documents/GitHub/BackSeguro/SegurosApi/SegurosApi.csproj",
   "expectedPackageFiles": [
     "/Users/mateogomezosio/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/mateogomezosio/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",

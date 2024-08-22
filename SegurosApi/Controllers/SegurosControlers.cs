@@ -16,6 +16,7 @@ namespace InsuranceApi.Controllers
 
         public SegurosController(InsuranceContext context)
         {
+            // Realizamos una inyección de dependencias
             _context = context;
         }
 
@@ -53,6 +54,9 @@ namespace InsuranceApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSeguro(int id, Seguro seguro)
         {
+            // Validación en la cual se valida el id que se esta suministrando con el id almacenado en la BD
+            // de no ser asi se enviara un mensaje de bad request en la cual se informa que el id no coincide 
+            // con el id almacenado
             if (id != seguro.NumeroIdentificacion)
             {
                 return BadRequest("El ID en la URL no coincide con el ID del seguro.");
@@ -75,6 +79,9 @@ namespace InsuranceApi.Controllers
             seguroExistente.ValorEstimadoSeguro = seguro.ValorEstimadoSeguro;
             seguroExistente.Observaciones = seguro.Observaciones;
 
+            // Try catch para almacenar de haber un error nos mostrara dos resultados
+            // puede ser que no se encuentre el seguro o un error de la base de datos
+            // sea conexion u otro factor
             try
             {
                 await _context.SaveChangesAsync();
@@ -87,12 +94,13 @@ namespace InsuranceApi.Controllers
                 }
                 else
                 {
-                    // Log error details
+                    // Mediante este error podemos conocer los detalles del fallo
                     Console.WriteLine($"Error de concurrencia: {ex.Message}");
                     throw;
                 }
             }
 
+            
             return NoContent();
         }
 
@@ -101,12 +109,17 @@ namespace InsuranceApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSeguro(int id)
         {
+            // Validamos que el seguro exista, para esto se hace la consulta a la BD
+            // y en caso de ser null dejara un mensaje de no encontrado
+
             var seguro = await _context.Seguros.FindAsync(id);
             if (seguro == null)
             {
                 return NotFound();
             }
 
+            // Si existe el seguro en este caso el (id) se procede a eliminar el registro 
+            // utilizando el metodo remove y posteriormente se guardan los cambios
             _context.Seguros.Remove(seguro);
             await _context.SaveChangesAsync();
 

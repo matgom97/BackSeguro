@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mateogomezosio/SegurosApi/SegurosApi.csproj": {}
+    "/Users/mateogomezosio/Documents/GitHub/BackSeguro/SegurosApi/SegurosApi.csproj": {}
   },
   "projects": {
-    "/Users/mateogomezosio/SegurosApi/SegurosApi.csproj": {
+    "/Users/mateogomezosio/Documents/GitHub/BackSeguro/SegurosApi/SegurosApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mateogomezosio/SegurosApi/SegurosApi.csproj",
+        "projectUniqueName": "/Users/mateogomezosio/Documents/GitHub/BackSeguro/SegurosApi/SegurosApi.csproj",
         "projectName": "SegurosApi",
-        "projectPath": "/Users/mateogomezosio/SegurosApi/SegurosApi.csproj",
+        "projectPath": "/Users/mateogomezosio/Documents/GitHub/BackSeguro/SegurosApi/SegurosApi.csproj",
         "packagesPath": "/Users/mateogomezosio/.nuget/packages/",
-        "outputPath": "/Users/mateogomezosio/SegurosApi/obj/",
+        "outputPath": "/Users/mateogomezosio/Documents/GitHub/BackSeguro/SegurosApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mateogomezosio/.nuget/NuGet/NuGet.Config"
